@@ -17,6 +17,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "libs/components/homepage"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "libs/components/homepage", "next.config.mjs"],
   "exclude": ["node_modules"]
 }
