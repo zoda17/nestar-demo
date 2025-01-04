@@ -1,15 +1,14 @@
-import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import { Stack } from "@mui/material";
 import { NextPage } from "next";
 import TrendProperties from "@/libs/components/homepage/TrendProperties";
+import PopularProperties from "@/libs/components/homepage/PopularProperties";
 import Advertisement from "@/libs/components/homepage/Advertisement";
-import TopProperties from "@/libs/components/homepage/TopProperties";
-import TopAgents from "@/libs/components/homepage/TopAgents";
-
+import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import PopularProperties from "@/libs/components/homepage/PopularProperties";
+import TopProperties from "@/libs/components/homepage/TopProperties";
+import TopAgents from "@/libs/components/homepage/TopAgents";
 
 const Home: NextPage = () => {
   return (
@@ -23,5 +22,4 @@ const Home: NextPage = () => {
   );
 };
 
-// withLayoutMain ga Home ni wrap qilsak oziga yutib oladi va uni biz LayoutMain filega uni joylaymiz for rendering purpose
 export default withLayoutMain(Home);

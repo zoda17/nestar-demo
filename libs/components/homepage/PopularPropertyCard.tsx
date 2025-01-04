@@ -1,11 +1,12 @@
 import React from "react";
-import { Stack, Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 const PopularPropertyCard = () => {
   return (
-    <Stack className="popular-card-box">
+    <Stack className={"popular-card-box"}>
       <Box
         className={"card-img"}
         style={{
@@ -16,11 +17,11 @@ const PopularPropertyCard = () => {
           <img src="/img/icons/electricity.svg" alt="" />
           <span>top</span>
         </div>
-        <div className={"price"}>$200000</div>
+        <div className={"price"}>$520000</div>
       </Box>
       <Box className={"info"}>
         <strong className={"title"}>Busan City Hall Apartments</strong>
-        <p className={"des"}>Good wills</p>
+        <p className={"desc"}>Good wills</p>
         <div className={"options"}>
           <div>
             <img src="/img/icons/bed.svg" alt="" />
@@ -37,20 +38,21 @@ const PopularPropertyCard = () => {
         </div>
         <Divider sx={{ mt: "15px", mb: "17px" }} />
         <div className={"bott"}>
-          <p>rent</p>
-          <div className="view-like-box">
+          <p>Rent</p>
+          <div className={"view-like-box"}>
             <IconButton color={"default"}>
               <RemoveRedEyeIcon />
             </IconButton>
-            <Typography className="view-cnt">50</Typography>
+            <Typography className={"view-cnt"}>120</Typography>
             <IconButton color={"default"}>
               <FavoriteIcon style={{ color: "red" }} />
             </IconButton>
-            <Typography className="view-cnt">250</Typography>
+            <Typography className={"view-cnt"}>250</Typography>
           </div>
         </div>
       </Box>
     </Stack>
   );
 };
+
 export default PopularPropertyCard;

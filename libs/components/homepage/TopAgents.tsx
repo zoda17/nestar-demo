@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Stack, Box } from "@mui/material";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Box, Stack } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TopAgentCard from "./TopAgentCard";
+import Link from "next/link";
+
 const TopAgents = ({ initialInput, ...props }: any) => {
-  const [topAgents, setTopAgents] = useState<number[]>(initialInput);
+  const [topAgents, setTopAgents] = useState<number[]>([1, 2, 3, 4, 5, 6, 7]);
+
   return (
     <Stack className={"top-agents"}>
       <Stack className={"container"}>
@@ -15,11 +18,14 @@ const TopAgents = ({ initialInput, ...props }: any) => {
           </Box>
           <Box className={"right"}>
             <div className={"more-box"}>
-              <span>See All Agents</span>
+              <Link href={"/property"}>
+                <span>See All Agents</span>
+              </Link>
               <img src="/img/icons/rightup.svg" alt="" />
             </div>
           </Box>
         </Stack>
+
         <Stack className={"wrapper"}>
           <Box className={"switch-btn swiper-agents-prev"}>
             <ArrowBackIosNewIcon />
@@ -31,10 +37,10 @@ const TopAgents = ({ initialInput, ...props }: any) => {
               spaceBetween={29}
               navigation={{
                 nextEl: ".swiper-agents-next",
-                prevEl: " .swiper-agents-prev",
+                prevEl: ".swiper-agents-prev",
               }}
             >
-              {topAgents?.map((agent, index) => {
+              {topAgents.map((agent, index) => {
                 return (
                   <SwiperSlide className={"top-agents-slide"} key={index}>
                     <TopAgentCard />
@@ -51,7 +57,9 @@ const TopAgents = ({ initialInput, ...props }: any) => {
     </Stack>
   );
 };
+
 TopAgents.defaultProps = {
   initialInput: [1, 2, 3, 4, 5, 6, 7],
 };
+
 export default TopAgents;

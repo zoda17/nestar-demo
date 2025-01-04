@@ -25,24 +25,22 @@ const Top = () => {
             <Link href={"/community?articleCategory=FREE"}>
               <div>Community</div>
             </Link>
+
             <Link href={"/cs"}>
               <div>CS</div>
             </Link>
           </Box>
           <Box component={"div"} className={"user-box"}>
             <>
-              <div className="login-user">
-                <img src="/img/profile/defaultUser.svg" />
+              <div className={"login-user"}>
+                <img src={"/img/profile/defaultUser.svg"} alt="" />
               </div>
-
               <Menu id="basic-menu" sx={{ mt: "5px" }} open={false}>
                 <MenuItem>
                   <Logout
                     fontSize="small"
                     style={{ color: "blue", marginRight: "10px" }}
-                  >
-                    Logout
-                  </Logout>
+                  />
                 </MenuItem>
               </Menu>
             </>

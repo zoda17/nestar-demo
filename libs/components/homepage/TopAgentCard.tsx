@@ -1,19 +1,17 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
+
 const TopAgentCard = () => {
   return (
-    <Stack className="top-agent-card">
-      <Box
-        className={"card-img"}
-        style={{
-          backgroundImage: `url("/img/profile/girl.svg")`,
-        }}
-      ></Box>
-      <Typography className="agent-name">
-        <strong>Alice</strong>
-      </Typography>
-      <Typography className="agent-details">Agent Details</Typography>
+    <Stack className={"top-agent-card"}>
+      <img
+        style={{ width: "209px", height: "209px" }}
+        src="/img/profile/girl.svg"
+      />
+      <strong>Martin</strong>
+      <span>AGENT</span>
     </Stack>
   );
 };
+
 export default TopAgentCard;

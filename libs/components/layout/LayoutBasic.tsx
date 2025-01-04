@@ -1,7 +1,7 @@
-import Footer from "@/libs/Footer";
 import { Stack } from "@mui/material";
 import Head from "next/head";
 import Top from "../Top";
+import Footer from "@/libs/Footer";
 
 const withLayoutBasic = (Component: any) => {
   return (props: any) => {
@@ -16,7 +16,7 @@ const withLayoutBasic = (Component: any) => {
           </Stack>
 
           <Stack
-            className={"header-basic"}
+            className={`header-basic`}
             style={{
               backgroundImage: `url(/img/banner/properties.png)`,
               backgroundSize: "cover",
@@ -24,8 +24,8 @@ const withLayoutBasic = (Component: any) => {
             }}
           >
             <Stack className={"container"}>
-              <strong>Search</strong>
-              <span>We are glad to see you again!</span>
+            <strong> Search </strong>
+              <span>We are glad to see you again! </span>
             </Stack>
           </Stack>
 

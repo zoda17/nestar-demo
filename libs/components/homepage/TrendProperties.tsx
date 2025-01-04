@@ -1,54 +1,54 @@
-import { Box, Stack } from "@mui/material";
-import React, { useState } from "react";
-import WestIcon from "@mui/icons-material/West";
-import EastIcon from "@mui/icons-material/East";
-import { Swiper, SwiperSlide } from "swiper/react";
-import TrendPropertyCard from "./TrendPropertyCard";
-const TrendProperties = ({ initialInput, ...props }: any) => {
-  const [trendProperties, setTopProperties] = useState<number[]>(initialInput);
+import React from "react";
+import { Box, Divider, Stack, Typography } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
+const TopPropertyCard = () => {
   return (
-    <Stack className="trend-properties">
-      <Stack className="container">
-        <Stack className="info-box">
-          <Box className="left">
-            <span>Trend Properties</span>
-            <p>Trend is based on likes</p>
-          </Box>
-          <Box className="right">
-            <div className="pagination-box">
-              <WestIcon className="swiper-trend-prev" />
-              <div className="swiper-trend-pagination"></div>
-              <EastIcon className="swiper-trend-next" />
-            </div>
-          </Box>
-        </Stack>
-        <Stack className="card-box">
-          {trendProperties?.length === 0 ? (
-            <Box className="empty-list">Trends Empty</Box>
-          ) : (
-            <Swiper
-              className="trend-property-swiper"
-              slidesPerView={"auto"}
-              spaceBetween={15}
-              navigation={{
-                nextEl: ".swiper-trend-next",
-                prevEl: ".swiper-trend-prev",
-              }}
-              pagination={{ el: ".swiper-trend-pagination", clickable: true }}
-            >
-              {trendProperties?.map((property, index) => (
-                <SwiperSlide key={index} className="trend-property-slide">
-                  <TrendPropertyCard />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-        </Stack>
-      </Stack>
+    <Stack className={"top-card-box"}>
+      <Box
+        className={"card-img"}
+        style={{
+          backgroundImage: `url("/img/banner/types/apartment.webp")`,
+        }}
+      >
+        <div>$420000</div>
+      </Box>
+      <Box className={"info"}>
+        <strong className={"title"}>Run Will Buildings</strong>
+        <p className={"desc"}>Seul Gangnam Apartments</p>
+        <div className={"options"}>
+          <div>
+            <img src="/img/icons/bed.svg" alt="" />
+            <span>3 bed</span>
+          </div>
+          <div>
+            <img src="/img/icons/room.svg" alt="" />
+            <span>7 rooms</span>
+          </div>
+          <div>
+            <img src="/img/icons/expand.svg" alt="" />
+            <span>250 m2</span>
+          </div>
+        </div>
+        <Divider sx={{ mt: "15px", mb: "17px" }} />
+        <div className={"bott"}>
+          <p>Rent</p>
+          <div className={"view-like-box"}>
+            <IconButton color={"default"}>
+              <RemoveRedEyeIcon />
+            </IconButton>
+            <Typography className={"view-cnt"}>120</Typography>
+            <IconButton color={"default"}>
+              <FavoriteIcon style={{ color: "red" }} />
+            </IconButton>
+            <Typography className={"view-cnt"}>200</Typography>
+          </div>
+        </div>
+      </Box>
     </Stack>
   );
 };
-TrendProperties.defaultProps = {
-  initialInput: [1, 2, 3, 4, 5, 6, 71],
-};
-export default TrendProperties;
+
+export default TopPropertyCard;

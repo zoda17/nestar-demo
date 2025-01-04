@@ -1,5 +1,5 @@
-import React from "react";
 import { Stack } from "@mui/material";
+
 const Advertisement = () => {
   return (
     <Stack className={"video-frame"}>
@@ -16,4 +16,5 @@ const Advertisement = () => {
     </Stack>
   );
 };
+
 export default Advertisement;
