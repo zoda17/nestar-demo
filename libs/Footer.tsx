@@ -1,8 +1,8 @@
-import { Box, Stack } from "@mui/material";
-import FacebookOutlined from "@mui/icons-material/FacebookOutlined";
-import TelegramIcon from "@mui/icons-material/Telegram";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import TelegramIcon from "@mui/icons-material/Telegram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Stack, Box } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -14,17 +14,17 @@ const Footer = () => {
           </Box>
           <Box component={"div"} className={"footer-box"}>
             <span>total free customer care</span>
-            <p>+82 10 2193 1234</p>
+            <p>+82 10 4867 2909</p>
           </Box>
           <Box component={"div"} className={"footer-box"}>
             <span>nee live</span>
-            <p>+82 10 2193 1234</p>
-            <span>Support ?</span>
+            <p>+82 10 4867 2909</p>
+            <span>Support?</span>
           </Box>
           <Box component={"div"} className={"footer-box"}>
             <p>follow us on social media</p>
             <div className={"media-box"}>
-              <FacebookOutlined />
+              <FacebookOutlinedIcon />
               <TelegramIcon />
               <InstagramIcon />
               <TwitterIcon />
@@ -56,17 +56,17 @@ const Footer = () => {
             </div>
             <div>
               <strong>Discover</strong>
-              <span>Seul</span>
+              <span>Seoul</span>
               <span>Gyeongido</span>
               <span>Busan</span>
-              <span>jejudo</span>
+              <span>Jejudo</span>
             </div>
           </Box>
         </Stack>
       </Stack>
       <Stack className={"second"}>
-        <span> Nestar - All rights reserved. Nestar 2024</span>
-        <span> Privacy Terms Sitemap</span>
+        <span>© Nestar - All rights reserved. Nestar 2024</span>
+        <span>Privacy · Terms · Sitemap</span>
       </Stack>
     </Stack>
   );

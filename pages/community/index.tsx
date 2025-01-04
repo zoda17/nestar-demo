@@ -6,7 +6,7 @@ import { useState } from "react";
 const Community: NextPage = () => {
   return (
     <div style={{ margin: "20px 0" }}>
-      <Stack className={"container"}>COMMUNITY</Stack>
+      <Stack className="container">COMMUNITY</Stack>
     </div>
   );
 };

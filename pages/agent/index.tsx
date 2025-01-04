@@ -4,10 +4,10 @@ import { NextPage } from "next";
 import { useState } from "react";
 
 const AgentList: NextPage = () => {
-  const [title, setTitle] = useState<string>("hello");
+  const [title, setTitle] = useState("hello");
   return (
     <div style={{ margin: "20px 0" }}>
-      <Stack className={"container"}>AGENT LIST</Stack>
+      <Stack className="container">AGENTS LIST</Stack>
     </div>
   );
 };

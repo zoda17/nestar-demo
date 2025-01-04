@@ -1,23 +1,23 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import { ExpandMore } from "@mui/icons-material";
+ExpandMore;
 const HeaderFilter = () => {
   return (
     <>
-      <Stack className={"search-box"}>
-        <Stack className={"select-box"}>
+      <Stack className="search-box">
+        <Stack className="select-box">
           <Box component={"div"} className={"box on"}>
             <span>Location</span>
-            <ExpandMoreIcon />
+            <ExpandMore />
           </Box>
           <Box className={"box"}>
             <span>Property type</span>
-            <ExpandMoreIcon />
+            <ExpandMore />
           </Box>
           <Box className={"box"}>
-            <span>7 Rooms </span>
-            <ExpandMoreIcon />
+            <span>7 Rooms</span>
+            <ExpandMore />
           </Box>
         </Stack>
         <Stack className={"search-box-other"}>
@@ -26,12 +26,11 @@ const HeaderFilter = () => {
             <span>Advanced</span>
           </Box>
           <Box className={"search-btn"}>
-            <img src="/img/icons/search_white.svg" />
+            <img src="/img/icons/search_white.svg" alt="" />
           </Box>
         </Stack>
       </Stack>
     </>
   );
 };
-
 export default HeaderFilter;
