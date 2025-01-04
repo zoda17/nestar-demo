@@ -2,21 +2,18 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang='en'>
       <Head>
-        <meta charSet="UTF-8" />
-        <meta name="title" content="Nestar Demo" />
-        <meta name="robots" content="index, follow" />
-        <link rel="icon" type="image/png" href="/img/logo/favicon.svg" />
+        <meta charSet='UTF-8' />
+        <meta name='title' content='Nestar Demo' />
+        <meta name='robots' content='index, follow' />
+        <link rel='icon' type='image/png' href='/img/logo/favicon.svg' />
 
         {/* SEO */}
 
+        <meta name='keyword' content={"nestar, nestar.uz, devex mern, mern nestjs fullstack"} />
         <meta
-          name="keyword"
-          content={"nestar, nestar.uz, devex mern, mern nestjs fullstack"}
-        />
-        <meta
-          name="description"
+          name='description'
           content={
             "Buy and sell propertie anywhere anytime in South Korea. | " +
             "Покупайте и продавайте недвижимость в любом месте и в любое время в Южной Корее. | " +
